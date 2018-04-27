@@ -32,9 +32,10 @@ public class controladorBoton : MonoBehaviour
 
 	public void clickPuntuacion(){
 	
-		/*p = PlayerPrefs.GetInt ("Score");
-		puntuMax.text = p.ToString;
-		puntuMax.enabled = true;*/
+		p = PlayerPrefs.GetInt ("Score");
+		string textoPuntuacion = p.ToString();
+		puntuMax.text = textoPuntuacion;
+		puntuMax.enabled = true;
 	}
 
 	public void cambiarFondo ()

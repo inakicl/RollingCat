@@ -114,13 +114,7 @@ public class controladorJuego : MonoBehaviour
 			creadoraDeColumnas.instancia.creadoraColumnas ();
 		}
 
-		//gato muerto, reiniciar
-		if (gatoMuerto) {
-			//recargar
-			/*if (Input.GetMouseButtonDown (0)) {
-				SceneManager.LoadScene (1);
-			}*/
-		}
+
 
 	}
 
@@ -154,6 +148,11 @@ public class controladorJuego : MonoBehaviour
 			PlayerPrefs.SetInt ("Score", (int)score);
 		}*/
 
+		if (PlayerPrefs.GetInt ("Score") < (int)score) {
+		
+			PlayerPrefs.SetInt ("Score", (int)score);
+		}
+			 
 	}
 
 	public void reiniciarJuego ()
